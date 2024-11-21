@@ -1,6 +1,7 @@
 const contacts = [];
 const form = document.getElementById('contactForm');
-
+const tableBody = document.querySelector('#contactsTable tbody');
+const searchInput = document.getElementById('search');
 
 form.addEventListener('añadir', (e) => {
     e.preventDefault();
@@ -35,4 +36,20 @@ function renderContacts(filter = '') {
             `;
             tableBody.appendChild(row);
         });
+}
+
+function editContact(index) {
+    const contact = contacts[index];
+    document.getElementById('name').value = contact.name;
+    document.getElementById('phone').value = contact.phone;
+    document.getElementById('email').value = contact.email;
+    document.getElementById('label').value = contact.label;
+
+    contacts.splice(index, 1);
+    renderContacts();
+}
+
+function deleteContact(index) {
+    contacts.splice(index, 1);
+    renderContacts();
 }
