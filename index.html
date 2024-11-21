@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gestion de Personas</title>
 </head>
 <body>
-    
+    <div>
+        <h1>Gestión de Contactos</h1>
+        <div class="form-container">
+            <h2>Añadir Contacto</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Nombre completo" required>
+                <input type="tel" id="phone" placeholder="Teléfono" required>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="text" id="label" placeholder="Etiqueta" required>
+                <button type="Añadir">Añadir</button>
+            </form>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Buscar por nombre o etiqueta">
+        </div>
+        <div class="table-container">
+            <table id="contactsTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Etiqueta</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
